@@ -1,19 +1,27 @@
 plugins {
-    id("java")
+    alias(libs.plugins.nexus.publish)
 }
 
-group = "dev.ole.ramora"
-version = "1.0-SNAPSHOT"
+allprojects {
+    apply(plugin = "java-library")
+    apply(plugin = "maven-publish")
 
-repositories {
-    mavenCentral()
-}
+    version = "1.0.0-SNAPSHOT"
+    group = "dev.ole.ramora"
 
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
+    repositories {
+        mavenCentral()
+        maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/")
+    }
 
-tasks.test {
-    useJUnitPlatform()
+    dependencies {
+        "annotationProcessor"(rootProject.libs.lombok)
+        "implementation"(rootProject.libs.bundles.utils)
+    }
+
+    tasks.withType<JavaCompile>().configureEach {
+        sourceCompatibility = JavaVersion.VERSION_17.toString()
+        targetCompatibility = JavaVersion.VERSION_17.toString()
+        options.encoding = "UTF-8"
+    }
 }
