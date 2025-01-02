@@ -12,6 +12,10 @@ public class RepositoryEntry {
 
     private final String id;
     private final Class<?> clazz;
+    private final RepositoryExternalEntry parent;
     private final ConstantPool constants = new ConstantPool();
 
+    public boolean isExternal() {
+        return this instanceof RepositoryExternalEntry;
+    }
 }
