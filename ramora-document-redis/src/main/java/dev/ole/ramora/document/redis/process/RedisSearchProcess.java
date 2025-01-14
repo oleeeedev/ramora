@@ -89,4 +89,7 @@ public final class RedisSearchProcess extends QueryProcess<List<Object>, RedisPr
         }
         return value;
     }
+
+
+
 }

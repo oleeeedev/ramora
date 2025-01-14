@@ -27,7 +27,7 @@ public final class RedisDeleteProcess extends UpdateProcess<RedisProcessReferenc
 
             if (!keys.isEmpty()) {
                 reference.connection().connection().sync().del(keys.toArray(new String[0]));
-                log.debug("Evelon delete redis key{}", cursor.getCursor());
+                log.debug("Ramora delete redis key{}", cursor.getCursor());
             }
 
         } while (!cursor.isFinished());

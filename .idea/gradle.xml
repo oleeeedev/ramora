@@ -10,6 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ramora-common" />
+            <option value="$PROJECT_DIR$/ramora-document-parent" />
+            <option value="$PROJECT_DIR$/ramora-document-redis" />
+            <option value="$PROJECT_DIR$/ramora-sql-parent" />
           </set>
         </option>
       </GradleProjectSettings>
