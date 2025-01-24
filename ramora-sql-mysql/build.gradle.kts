@@ -1,19 +1,7 @@
-plugins {
-    id("java")
-}
-
-group = "dev.ole.ramora.sql"
-version = "1.0.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
+    api(libs.hikari)
 
-tasks.test {
-    useJUnitPlatform()
+    implementation(libs.mysql)
+    api(project(":ramora-common"))
+    api(project(":ramora-sql-parent"))
 }
