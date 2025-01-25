@@ -12,8 +12,11 @@
             <option value="$PROJECT_DIR$/ramora-common" />
             <option value="$PROJECT_DIR$/ramora-document-parent" />
             <option value="$PROJECT_DIR$/ramora-document-redis" />
+            <option value="$PROJECT_DIR$/ramora-sql-h2" />
+            <option value="$PROJECT_DIR$/ramora-sql-mariadb" />
             <option value="$PROJECT_DIR$/ramora-sql-mysql" />
             <option value="$PROJECT_DIR$/ramora-sql-parent" />
+            <option value="$PROJECT_DIR$/ramora-test" />
           </set>
         </option>
       </GradleProjectSettings>
